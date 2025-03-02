@@ -1,6 +1,9 @@
 Advisory: Using the Repository for Educational Purposes
+
 Purpose of the Repository:
+
 malware-1 is intended exclusively for educational purposes. It provides resources for learning, research, and academic projects related to phishing and malware awareness.
+
 Guidelines for Usage:
 Educational Use Only: This repository is meant for educational purposes only. Users should utilize the resources solely for learning and academic purposes. Any use outside of this scope, including for malicious or unauthorized activities, is strictly prohibited.
 
