@@ -1,65 +1,86 @@
+/* Variables globales */
+:root {
+    --primary-color: #d53f3f;
+    --text-color: #0c0c0c;
+    --background-color: #ffffff;
+    --link-color: #d53f3f;
+    --link-hover-color: #a32f2f;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-body {
-    margin: 0;
-    background-color: #fff;
-}
-
+/* Estilo del encabezado */
 header {
-    background-color: #d53f3f;
-    color: #fff;
-    padding: 3rem 2rem;
-    text-align: justify;
-}
-
-header h1 {
-    font-size: 3rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 2rem;
     text-align: center;
 }
 
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Contenedor principal */
 .container {
-    width: 400px;
-    margin: 0 auto;
-    color: rgb(12, 12, 12);
-    text-align: justify;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: var(--background-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
+/* Títulos */
 h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* Párrafos */
+p {
     text-align: justify;
-    color: rgb(12, 12, 12);
+    line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
-section.article {
-    background-color: #fff;
-    margin: 1rem 0;
-    padding: 0.25rem 0;
-}
-
-section article h2,
-section article p,
-section article a {
-    margin: 1rem;
-}
-
-footer {
-    background-color: #fff;
-    padding: 3rem;
-    margin: 1rem 0;
-    color: rgb(12, 12, 12);
-}
-
-footer section {
-    float: inline-start;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer a {
-    transition: color 0.3s ease;
-    color: rgb(12, 12, 12);
+/* Botón de cambio de contraseña */
+.container a {
+    display: block;
+    text-align: center;
+    background-color: var(--link-color);
+    color: var(--background-color);
     text-decoration: none;
+    font-weight: bold;
+    padding: 0.75rem;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
+
+.container a:hover {
+    background-color: var(--link-hover-color);
+    transform: scale(1.05);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
