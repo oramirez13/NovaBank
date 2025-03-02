@@ -1,47 +1,51 @@
-### Advisory: Using the Repository for Educational Purposes
+Advisory: Using the Repository for Educational Purposes
+Purpose of the Repository:
+malware-1 is intended exclusively for educational purposes. It provides resources for learning, research, and academic projects related to phishing and malware awareness.
+Guidelines for Usage:
+Educational Use Only: This repository is meant for educational purposes only. Users should utilize the resources solely for learning and academic purposes. Any use outside of this scope, including for malicious or unauthorized activities, is strictly prohibited.
 
-#### Purpose of the Repository:
-- malware-1 is intended primarily for educational purposes. 
+Attribution: If you use any materials or code snippets from this repository, please give appropriate credit to the original authors and contributors. This helps to maintain academic integrity and acknowledge the efforts of those who have created and shared these resources.
 
-#### Guidelines for Usage:
-1. **Educational Use Only:** This repository is meant for educational purposes exclusively. Users are expected to utilize the resources available for learning, research, and academic projects.
+Contributions and Collaboration: We encourage users to contribute by sharing educational materials, offering feedback, and collaborating with other learners. However, contributions should align with the educational goals of this repository and adhere to the guidelines outlined here.
 
-2. **Attribution:** When using materials or code snippets from this repository, please provide appropriate attribution to the original authors or contributors. This helps maintain academic integrity and acknowledges the efforts of those who have contributed to the repository.
+Community Standards: Please be respectful and considerate toward other members of the community. Avoid disruptive behavior or any activity that violates community standards. Our goal is to maintain a positive and educational environment for all users.
 
-3. **Contribution and Collaboration:** We encourage users to contribute to the repository by sharing educational materials, providing feedback, and collaborating with fellow learners. However, contributions should align with the educational objectives of the repository and adhere to the guidelines outlined herein.
-  
-4. **Community Standards:** Be respectful and considerate of other users in the community. Avoid engaging in activities that may disrupt the learning experience or violate community standards.
-  
-5. **Feedback and Suggestions:** We value your feedback and suggestions for improving the repository. If you have any ideas or concerns, please don't hesitate to reach out to the repository maintainers.
+Feedback and Suggestions: We welcome your feedback and suggestions for improving this repository. If you have ideas, concerns, or questions, please contact the repository maintainers.
 
-#### Disclaimer:
-- The materials and resources provided in this repository are offered "as is" without any warranty, express or implied. The repository maintainers do not guarantee the accuracy, completeness, or suitability of the content for any specific purpose. Users are responsible for verifying the information and exercising caution when applying it in practice.
-
-#### Contact Information:
-- For inquiries, feedback, or assistance, please contact oramirezmg@gmail.com.
-
-Thank you for your cooperation in adhering to these guidelines. We hope you find malware-1 to be a valuable resource for your educational journey.
+Disclaimer:
+The materials and resources in this repository are provided "as is," with no warranties, either express or implied. The maintainers do not guarantee the accuracy, completeness, or suitability of the content for any specific purpose. Users are responsible for verifying the information and should use caution when applying it in practice.
+Contact Information:
+For inquiries, feedback, or assistance, please contact: oramirezmg@gmail.com.
+Thank you for respecting these guidelines. We hope malware-1 proves to be a valuable resource in your educational journey.
 
 Sincerely,
-
 orami13
 
----
+How to Run the Python Script
+Permissions:
+Administrator privileges are required to run the script effectively, particularly to terminate processes and delete certain files.
+Operating System:
+The script is designed for Windows (based on the file paths and typical malware file types). If you're using Linux or macOS, you may need to modify file paths and other elements of the script accordingly.
+Environment:
+It's strongly recommended to test this script in a controlled environment (e.g., a virtual machine or sandbox) before deploying it in any critical system. This will help prevent accidental deletion of important files or termination of essential services.
+Troubleshooting: Restoring Affected .exe Files
+If your .exe files have been impacted by malware or accidentally deleted, here are some potential recovery options:
 
-How to Run The Python Script
-# Permissions: You will need administrator privileges to run this script effectively, especially to kill processes and delete certain files.
-Operating System: The script is designed for Windows (as indicated by the file paths and typical malware file types). You will need to modify file paths and possibly other elements for other operating systems like Linux or macOS.
-Environment: It's highly recommended to test this script in a controlled environment before deploying it anywhere critical. This can prevent the accidental deletion of important files or the termination of essential services.
+Backup: If you have a backup of your .exe files, you can restore them from there.
 
-If your .exe files have been affected by malware or have been accidentally deleted, restoring them will depend on a few factors:
+System Restore (Windows only): If you're using Windows, you can try using the System Restore feature to revert your system to a previous state before the .exe files were deleted or corrupted.
 
-# Backup: If you have a backup of your .exe files, you can easily restore them from there.
-System Restore: If you're using Windows, you can try using the System Restore feature to revert your system to a previous point in time when the .exe files were intact.
-Antivirus or Antimalware Scan: Run a thorough scan of your system using reputable antivirus or antimalware software. Some malware may hide or corrupt .exe files, and a scan may help to detect and restore them.
-Check Quarantine: If your antivirus or antimalware software has a quarantine feature, check there to see if any .exe files have been quarantined and restore them if needed.
-Manual Reinstallation: If the .exe files are part of software you've installed, you may need to reinstall the affected software to restore the .exe files.
-Download from Official Source: For system files or software you've downloaded from official sources, you can redownload them and reinstall.
-File Recovery Tools: If the .exe files have been deleted but not overwritten, you might be able to recover them using file recovery tools. However, this is not guaranteed to work, especially if the files have been overwritten or if the drive has been heavily used since deletion.
+Antivirus/Antimalware Scan: Run a thorough scan using reputable antivirus or antimalware software. Some malware can hide or corrupt .exe files, and a scan may help detect and restore them.
 
-# phishing mail-1
-# malware-1
+Check Quarantine: If your antivirus software has a quarantine feature, check to see if any .exe files have been quarantined and restore them if necessary.
+
+Reinstall Software: If the affected .exe files belong to specific software, you may need to reinstall the software to restore the missing files.
+
+Download from Official Source: If the .exe files are part of system software or applications that were downloaded from official sources, you can re-download them from the official website.
+
+File Recovery Tools: If the .exe files were deleted but not overwritten, you might be able to recover them using file recovery tools. However, this method is not guaranteed to work, particularly if the files have been overwritten or if significant time has passed since deletion.
+
+phishing mail-1
+malware-1
+
+
