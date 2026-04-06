@@ -12,9 +12,7 @@
 
 | Field       | Detail                     |
 | ----------- | -------------------------- |
-| Course      | CLV-0062 — Web Development |
-| Institution | Universidad Fidelitas      |
-| Author      | orami13                    |
+| Author      | orami                      |
 | Contact     | oramirezmg@gmail.com       |
 | Year        | 2024                       |
 
@@ -141,4 +139,4 @@ python app.py
 ---
 
 Thank you for using this resource responsibly.
-— orami13
+— orami
