@@ -1,4 +1,4 @@
-# NovaBank - Phishing & Malware Awareness Project
+# NovaBank — Phishing & Malware Awareness Project
 
 > ⚠️ **EDUCATIONAL PURPOSE ONLY**
 > This project is a **fictional simulation** created exclusively for academic and educational purposes.
@@ -10,11 +10,13 @@
 
 ## 📚 Academic Context
 
-| Field        | Detail                                      |
-|--------------|---------------------------------------------|
-| Author       | orami13                                     |
-| Contact      | oramirezmg@gmail.com                        |
-| Year         | 2024                                        |
+| Field       | Detail                        |
+|-------------|-------------------------------|
+| Course      | CLV-0062 — Web Development    |
+| Institution | Universidad Fidélitas         |
+| Author      | orami13                       |
+| Contact     | oramirezmg@gmail.com          |
+| Year        | 2024                          |
 
 ---
 
@@ -22,8 +24,8 @@
 
 This project demonstrates the **full lifecycle of a phishing attack** from an educational perspective:
 
-1. **The Bait** — A realistic-looking fake email alert from a fictional bank (NovaBank)
-2. **Awareness** — A page explaining how phishing works and how to identify it
+1. **The Bait** — A realistic-looking fake security alert from a fictional bank (NovaBank)
+2. **Awareness** — A page explaining how phishing works and how to detect it
 3. **Mitigation** — A Python script that detects and removes suspicious files and processes
 
 The goal is to help students and general users understand phishing tactics so they can **recognize and avoid them** in real life.
@@ -44,21 +46,23 @@ NovaBank exists solely to simulate a realistic phishing scenario for educational
 ```
 NovaBank/
 │
-├── index.html          # Simulated phishing page (fake NovaBank security alert)
-├── blog.html           # Educational page: what is phishing and how to detect it
-├── app.py              # Python script: suspicious file and process remover
+├── index.html      # Simulated phishing page (fake NovaBank security alert)
+├── blog.html       # Educational page: what is phishing and how to detect it
+├── app.py          # Python script: suspicious file and process remover
 │
 ├── css/
-│   ├── style01.css     # Styles for index.html (phishing page theme)
-│   └── style02.css     # Styles for blog.html (educational article theme)
+│   └── style.css   # Shared stylesheet for index.html and blog.html
 │
 ├── js/
-│   └── script.js       # Shared JavaScript (phishing warning interaction)
+│   └── script.js   # Shared JavaScript for both pages
 │
-├── img/                # Project images and assets
+├── img/            # Project images and assets
 │
-└── README.md           # This file
+└── README.md       # This file
 ```
+
+> **Note on `app.py` location:** This is a standalone Python script, not a Flask application.
+> By Python convention, standalone scripts live in the project root — no subfolder needed.
 
 ---
 
@@ -66,8 +70,8 @@ NovaBank/
 
 ### `index.html` — The Phishing Simulation
 A fake security alert page impersonating NovaBank.
-It mimics the visual style and urgent language used in real phishing emails.
-When the user clicks the download button, a JavaScript warning appears explaining that this is a phishing simulation — **the educational moment of the demo**.
+It mimics the visual style and urgent language used in real phishing attacks.
+When the user clicks the download button, a JavaScript warning appears revealing this is a simulation — **the educational moment of the demo**.
 
 ### `blog.html` — The Awareness Page
 An informational article explaining:
@@ -76,11 +80,21 @@ An informational article explaining:
 - Red flags to watch for in emails and websites
 - How to protect yourself
 
+### `css/style.css` — Shared Stylesheet
+A single CSS file used by both `index.html` and `blog.html`.
+Defines shared base styles (typography, layout, header, footer, buttons)
+and page-specific classes where visual differences are needed.
+
+### `js/script.js` — Shared JavaScript
+A single script file used by both pages.
+Handles the phishing warning popup interaction on `index.html`
+and any interactive elements on `blog.html`.
+
 ### `app.py` — The Mitigation Script
 A Python script that simulates malware removal by:
 - Scanning a directory for files with suspicious extensions (`.exe`, `.vbs`, `.bat`, `.js`)
 - Terminating known malicious process names
-- Logging every action taken
+- Logging every action taken with timestamps
 
 ---
 
@@ -100,12 +114,12 @@ python app.py
 
 ### ⚠️ Important Notes
 
-| Note | Detail |
-|------|--------|
-| **Permissions** | Administrator/root privileges required to terminate processes and delete certain files |
-| **OS** | Designed for Windows. Linux/macOS users must modify file paths in the script |
-| **Environment** | **Always run in a virtual machine or sandbox** — never on a production system |
-| **Purpose** | This script is a demonstration only. It targets fictional process names by default |
+| Note            | Detail                                                                  |
+|-----------------|-------------------------------------------------------------------------|
+| **Permissions** | Administrator/root privileges required to terminate processes           |
+| **OS**          | Designed for Windows. Linux/macOS users must modify file paths          |
+| **Environment** | **Always run in a virtual machine or sandbox** — never on a real system |
+| **Purpose**     | Demonstration only — targets fictional process names by default         |
 
 ---
 
@@ -116,13 +130,6 @@ python app.py
 - All techniques shown here are well-documented in public cybersecurity literature.
 - If you use materials from this repository, **give proper credit** to the original author.
 - Any use outside of educational or research contexts is **strictly prohibited** and may violate local and international laws.
-
----
-
-## 🔗 Related Projects
-
-- [phishing](https://github.com/oramirez13) — Related phishing awareness demos
-- [mail-1](https://github.com/oramirez13) — Email phishing simulation
 
 ---
 
