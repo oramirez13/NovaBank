@@ -10,13 +10,13 @@
 
 ## 📚 Academic Context
 
-| Field       | Detail                        |
-|-------------|-------------------------------|
-| Course      | CLV-0062 — Web Development    |
-| Institution | Universidad Fidélitas         |
-| Author      | orami13                       |
-| Contact     | oramirezmg@gmail.com          |
-| Year        | 2024                          |
+| Field       | Detail                     |
+| ----------- | -------------------------- |
+| Course      | CLV-0062 — Web Development |
+| Institution | Universidad Fidélitas      |
+| Author      | orami13                    |
+| Contact     | oramirezmg@gmail.com       |
+| Year        | 2024                       |
 
 ---
 
@@ -69,29 +69,36 @@ NovaBank/
 ## 🔍 How Each File Works
 
 ### `index.html` — The Phishing Simulation
+
 A fake security alert page impersonating NovaBank.
 It mimics the visual style and urgent language used in real phishing attacks.
 When the user clicks the download button, a JavaScript warning appears revealing this is a simulation — **the educational moment of the demo**.
 
 ### `blog.html` — The Awareness Page
+
 An informational article explaining:
+
 - What phishing is
 - How attackers craft convincing fake pages
 - Red flags to watch for in emails and websites
 - How to protect yourself
 
 ### `css/style.css` — Shared Stylesheet
+
 A single CSS file used by both `index.html` and `blog.html`.
 Defines shared base styles (typography, layout, header, footer, buttons)
 and page-specific classes where visual differences are needed.
 
 ### `js/script.js` — Shared JavaScript
+
 A single script file used by both pages.
 Handles the phishing warning popup interaction on `index.html`
 and any interactive elements on `blog.html`.
 
 ### `app.py` — The Mitigation Script
+
 A Python script that simulates malware removal by:
+
 - Scanning a directory for files with suspicious extensions (`.exe`, `.vbs`, `.bat`, `.js`)
 - Terminating known malicious process names
 - Logging every action taken with timestamps
@@ -115,7 +122,7 @@ python app.py
 ### ⚠️ Important Notes
 
 | Note            | Detail                                                                  |
-|-----------------|-------------------------------------------------------------------------|
+| --------------- | ----------------------------------------------------------------------- |
 | **Permissions** | Administrator/root privileges required to terminate processes           |
 | **OS**          | Designed for Windows. Linux/macOS users must modify file paths          |
 | **Environment** | **Always run in a virtual machine or sandbox** — never on a real system |
@@ -133,5 +140,5 @@ python app.py
 
 ---
 
-*Thank you for using this resource responsibly.*
-*— orami13*
+_Thank you for using this resource responsibly._
+_— orami13_
