@@ -1,50 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- Declaración del tipo de documento: indica al navegador que es HTML5 -->
+
 <html lang="en">
+  <!-- Etiqueta raíz del documento. lang="en" indica que el contenido está en inglés -->
+
   <head>
+    <!-- Sección de metadatos: no visible para el usuario, configura el documento -->
+
     <meta charset="UTF-8" />
+    <!-- Define la codificación de caracteres UTF-8 para soportar tildes y símbolos -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Security Alert - Immediate Action Required</title>
-    <link rel="stylesheet" href="style4.css" />
+    <!-- Hace la página responsiva: se adapta al ancho de cualquier pantalla o dispositivo -->
+
+    <title>NovaBank — Security Alert</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Bootstrap 5 CSS desde CDN -->
+    <!-- CDN = Content Delivery Network: carga Bootstrap desde servidores externos, sin instalarlo -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Hoja de estilos propia del proyecto -->
+    <!-- Se carga DESPUÉS de Bootstrap para que nuestros estilos tengan prioridad -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-    <header>
-      <h1>Someone Has Your Password</h1>
-    </header>
+    <!-- Cuerpo del documento: todo lo que el usuario ve en pantalla -->
 
-    <main class="container">
-      <article>
-        <h2>Hello,</h2>
-        <p>Someone just used your password to try to sign in to your Google account.</p>
-        <p>Google has blocked this sign-in attempt. You must change your password immediately to secure your account.</p>
-      </article>
+    <!-- ================================================
+       EDUCATIONAL DISCLAIMER BANNER
+       Aviso visible que aclara que esta página es una simulación educativa.
+       En un ataque real, esta barra NO existiría.
+       ================================================ -->
+    <div class="disclaimer-bar text-center py-2">
+      <!-- div con clase propia "disclaimer-bar" y utilidades Bootstrap:
+         text-center = texto centrado | py-2 = padding vertical pequeño -->
+      ⚠️ <strong>EDUCATIONAL SIMULATION</strong> — This is a fake phishing page
+      created for academic purposes only. NovaBank does not exist.
+    </div>
+
+    <!-- ================================================
+       NAVBAR — Barra de navegación superior
+       Simula la barra de un banco real para hacer el phishing creíble.
+       ================================================ -->
+    <nav class="navbar navbar-dark novabank-navbar">
+      <!-- navbar = componente de Bootstrap para barras de navegación -->
+      <!-- navbar-dark = texto e íconos en color claro (para fondos oscuros) -->
+      <!-- novabank-navbar = clase propia definida en style.css -->
+
+      <div class="container">
+        <!-- container = clase Bootstrap que centra el contenido y limita su ancho máximo -->
+
+        <a class="navbar-brand fw-bold" href="#">
+          <!-- navbar-brand = estilo Bootstrap para el logo/nombre de la marca -->
+          <!-- fw-bold = font-weight bold (texto en negrita) -->
+          <!-- href="#" = enlace que no va a ningún lado (simulación) -->
+          🏦 NovaBank
+        </a>
+        <!-- Fin del logo/marca -->
+
+        <span class="navbar-text text-white-50 small">
+          <!-- navbar-text = texto alineado verticalmente dentro del navbar -->
+          <!-- text-white-50 = texto blanco al 50% de opacidad -->
+          <!-- small = texto más pequeño que el normal -->
+          Online Banking Portal
+        </span>
+      </div>
+      <!-- Fin del container del navbar -->
+    </nav>
+    <!-- Fin del navbar -->
+
+    <!-- ================================================
+       MAIN — Contenido principal de la página
+       ================================================ -->
+    <main class="container my-5">
+      <!-- container = centra y limita el ancho del contenido -->
+      <!-- my-5 = margin vertical grande (espacio arriba y abajo) -->
+
+      <div class="row justify-content-center">
+        <!-- row = fila del sistema de grilla de Bootstrap -->
+        <!-- justify-content-center = centra la fila horizontalmente -->
+
+        <div class="col-12 col-md-8 col-lg-6">
+          <!-- Sistema de columnas responsivo de Bootstrap:
+             col-12 = ocupa 12/12 columnas en pantallas pequeñas (100% del ancho)
+             col-md-8 = ocupa 8/12 columnas en pantallas medianas
+             col-lg-6 = ocupa 6/12 columnas en pantallas grandes (50% del ancho) -->
+
+          <!-- TARJETA PRINCIPAL — Simula un email de alerta bancaria -->
+          <div class="card shadow-sm border-0 phishing-card">
+            <!-- card = componente de Bootstrap para tarjetas con contenido -->
+            <!-- shadow-sm = sombra suave debajo de la tarjeta -->
+            <!-- border-0 = sin borde visible -->
+            <!-- phishing-card = clase propia definida en style.css -->
+
+            <!-- Encabezado de la tarjeta: franja roja de alerta -->
+            <div
+              class="card-header text-white text-center py-3 novabank-header"
+            >
+              <!-- card-header = sección superior de la tarjeta Bootstrap -->
+              <!-- text-white = texto en color blanco -->
+              <!-- text-center = texto centrado -->
+              <!-- py-3 = padding vertical mediano -->
+              <!-- novabank-header = clase propia con color de fondo rojo -->
+
+              <h1 class="h4 mb-1">⚠️ Security Alert</h1>
+              <!-- h1 con clase h4 = semánticamente es un h1 (importante para accesibilidad)
+                 pero visualmente tiene el tamaño de un h4 (más pequeño) -->
+              <!-- mb-1 = margin-bottom pequeño -->
+
+              <p class="mb-0 small">NovaBank Online Banking</p>
+              <!-- mb-0 = sin margin-bottom | small = texto pequeño -->
+            </div>
+            <!-- Fin del card-header -->
+
+            <!-- Cuerpo de la tarjeta: el mensaje de phishing -->
+            <div class="card-body px-4 py-4">
+              <!-- card-body = sección principal de contenido de la tarjeta -->
+              <!-- px-4 = padding horizontal mediano-grande -->
+              <!-- py-4 = padding vertical mediano-grande -->
+
+              <p class="card-text">Dear NovaBank Customer,</p>
+              <!-- card-text = clase Bootstrap para párrafos dentro de una tarjeta -->
+
+              <p class="card-text">
+                We have detected <strong>unauthorized access</strong> to your
+                account from an unrecognized device. For your security, your
+                online banking access has been
+                <strong>temporarily suspended</strong>.
+              </p>
+              <!-- strong = negrita semántica, indica que ese texto es importante -->
+
+              <p class="card-text">
+                To restore access and verify your identity, please download and
+                run the
+                <strong>NovaBank Security Verification Tool</strong>
+                immediately.
+              </p>
+
+              <!-- ALERTA DE URGENCIA — Técnica clásica del phishing: presión de tiempo -->
+              <div class="alert alert-danger mt-3" role="alert">
+                <!-- alert = componente Bootstrap para mensajes de alerta -->
+                <!-- alert-danger = variante roja (peligro/urgencia) -->
+                <!-- mt-3 = margin-top mediano -->
+                <!-- role="alert" = atributo de accesibilidad para lectores de pantalla -->
+                🕐 <strong>Action required within 24 hours</strong> — failure to
+                verify may result in permanent account suspension.
+              </div>
+              <!-- Fin de la alerta de urgencia -->
+
+              <!-- BOTÓN DE DESCARGA — El "anzuelo" del phishing -->
+              <div class="d-grid mt-4">
+                <!-- d-grid = hace que el botón ocupe todo el ancho disponible -->
+                <!-- mt-4 = margin-top grande -->
+
+                <a
+                  href="app.py"
+                  download
+                  id="download-link"
+                  class="btn btn-danger btn-lg"
+                  aria-label="Download NovaBank Security Tool"
+                >
+                  <!-- href="app.py" = archivo que se intentaría descargar -->
+                  <!-- download = atributo HTML5 que fuerza la descarga del archivo -->
+                  <!-- id="download-link" = identificador único para usarlo con JavaScript -->
+                  <!-- btn = clase Bootstrap para botones -->
+                  <!-- btn-danger = botón en color rojo -->
+                  <!-- btn-lg = botón de tamaño grande -->
+                  <!-- aria-label = descripción para lectores de pantalla (accesibilidad) -->
+                  ⬇️ Download Security Tool
+                </a>
+                <!-- Fin del botón de descarga -->
+              </div>
+              <!-- Fin del d-grid -->
+
+              <!-- FIRMA DEL EMAIL FALSO -->
+              <hr class="mt-4" />
+              <!-- hr = línea horizontal separadora | mt-4 = margin-top grande -->
+
+              <p class="text-muted small mb-0">Sincerely,</p>
+              <!-- text-muted = texto en color gris suave | small = texto pequeño -->
+              <!-- mb-0 = sin margin-bottom -->
+
+              <p class="text-muted small">The NovaBank Security Team</p>
+            </div>
+            <!-- Fin del card-body -->
+
+            <!-- PIE DE LA TARJETA: copyright falso para hacerla más creíble -->
+            <div class="card-footer text-center text-muted small py-2">
+              <!-- card-footer = sección inferior de la tarjeta Bootstrap -->
+              <!-- text-center = texto centrado -->
+              <!-- text-muted = texto gris -->
+              <!-- small = texto pequeño -->
+              <!-- py-2 = padding vertical pequeño -->
+              &copy; 2024 NovaBank Financial Services. All rights reserved.
+              <!-- &copy; = entidad HTML para el símbolo © -->
+            </div>
+            <!-- Fin del card-footer -->
+          </div>
+          <!-- Fin de la phishing-card -->
+        </div>
+        <!-- Fin de la columna -->
+      </div>
+      <!-- Fin del row -->
     </main>
+    <!-- Fin del main -->
 
-    <section class="container">
-      <a href="gestion_tareas.py" download id="download-link" aria-label="Download Python security script">
-        Download Security Script
-      </a>
-      <p>Greetings,</p>
-      <p>The Google Security Team</p>
-    </section>
+    <!-- ================================================
+       FOOTER — Pie de página del sitio
+       ================================================ -->
+    <footer class="novabank-footer text-center py-3">
+      <!-- novabank-footer = clase propia con estilos del pie de página -->
+      <!-- text-center = texto centrado -->
+      <!-- py-3 = padding vertical mediano -->
 
-    <footer>
-      <p>&copy; 2024 Google LLC. All rights reserved.</p>
+      <p class="mb-0 small">
+        <!-- mb-0 = sin margin-bottom | small = texto pequeño -->
+        <strong>⚠️ Educational Project</strong> — CLV-0062 | Universidad
+        Fidélitas | orami13
+      </p>
     </footer>
+    <!-- Fin del footer -->
 
-    <script>
-      document.getElementById("download-link").addEventListener("click", function(event) {
-        event.preventDefault(); // Evita la descarga inmediata
+    <!-- ================================================
+       SCRIPTS — Se cargan al final del body para mejor rendimiento
+       Cargarlos al final permite que el HTML se muestre antes de ejecutar JS
+       ================================================ -->
 
-        // Mostrar mensaje de concienciación sobre phishing
-        let warning = confirm(
-          "⚠️ WARNING: Be cautious! \n\nDownloading files from unknown sources can be dangerous.\n\nOnly download if you fully trust the sender.\n\nDo you still want to proceed?"
-        );
+    <!-- jQuery desde CDN — debe cargarse ANTES que Bootstrap JS y que script.js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-        // Si el usuario confirma, permitir la descarga
-        if (warning) {
-          window.location.href = this.href;
-        }
-      });
-    </script>
+    <!-- Bootstrap 5 JS desde CDN — requiere jQuery o Popper para algunos componentes -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script propio del proyecto — se carga al último para que jQuery ya esté disponible -->
+    <script src="js/script.js"></script>
   </body>
+  <!-- Fin del body -->
 </html>
+<!-- Fin del documento HTML -->
