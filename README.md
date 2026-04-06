@@ -1,54 +1,132 @@
-Advisory: Using the Repository for Educational Purposes
+# malware-1 — Phishing & Malware Awareness Project
 
-Purpose of the Repository:
+> ⚠️ **EDUCATIONAL PURPOSE ONLY**
+> This project is a **fictional simulation** created exclusively for academic and educational purposes.
+> **NovaBank does not exist.** No real bank, brand, or institution is represented here.
+> The phishing page is intentionally fake. It is designed to demonstrate how phishing attacks work — not to deceive real users.
+> **Do not use any part of this project for malicious, unauthorized, or illegal activities.**
 
-malware-1 is intended exclusively for educational purposes. It provides resources for learning, research, and academic projects related to phishing and malware awareness.
+---
 
-Guidelines for Usage:
-Educational Use Only: This repository is meant for educational purposes only. Users should utilize the resources solely for learning and academic purposes. Any use outside of this scope, including for malicious or unauthorized activities, is strictly prohibited.
+## 📚 Academic Context
 
-Attribution: If you use any materials or code snippets from this repository, please give appropriate credit to the original authors and contributors. This helps to maintain academic integrity and acknowledge the efforts of those who have created and shared these resources.
+| Field        | Detail                                      |
+|--------------|---------------------------------------------|
+| Course       | CLV-0062 — Web Development                  |
+| Institution  | Universidad Fidélitas                        |
+| Author       | orami13                                     |
+| Contact      | oramirezmg@gmail.com                        |
+| Year         | 2024                                        |
 
-Contributions and Collaboration: We encourage users to contribute by sharing educational materials, offering feedback, and collaborating with other learners. However, contributions should align with the educational goals of this repository and adhere to the guidelines outlined here.
+---
 
-Community Standards: Please be respectful and considerate toward other members of the community. Avoid disruptive behavior or any activity that violates community standards. Our goal is to maintain a positive and educational environment for all users.
+## 🎯 Project Purpose
 
-Feedback and Suggestions: We welcome your feedback and suggestions for improving this repository. If you have ideas, concerns, or questions, please contact the repository maintainers.
+This project demonstrates the **full lifecycle of a phishing attack** from an educational perspective:
 
-Disclaimer:
-The materials and resources in this repository are provided "as is," with no warranties, either express or implied. The maintainers do not guarantee the accuracy, completeness, or suitability of the content for any specific purpose. Users are responsible for verifying the information and should use caution when applying it in practice.
-Contact Information:
-For inquiries, feedback, or assistance, please contact: oramirezmg@gmail.com.
-Thank you for respecting these guidelines. We hope malware-1 proves to be a valuable resource in your educational journey.
+1. **The Bait** — A realistic-looking fake email alert from a fictional bank (NovaBank)
+2. **Awareness** — A page explaining how phishing works and how to identify it
+3. **Mitigation** — A Python script that detects and removes suspicious files and processes
 
-Sincerely,
-orami13
+The goal is to help students and general users understand phishing tactics so they can **recognize and avoid them** in real life.
 
-How to Run the Python Script
-Permissions:
-Administrator privileges are required to run the script effectively, particularly to terminate processes and delete certain files.
-Operating System:
-The script is designed for Windows (based on the file paths and typical malware file types). If you're using Linux or macOS, you may need to modify file paths and other elements of the script accordingly.
-Environment:
-It's strongly recommended to test this script in a controlled environment (e.g., a virtual machine or sandbox) before deploying it in any critical system. This will help prevent accidental deletion of important files or termination of essential services.
-Troubleshooting: Restoring Affected .exe Files
-If your .exe files have been impacted by malware or accidentally deleted, here are some potential recovery options:
+---
 
-Backup: If you have a backup of your .exe files, you can restore them from there.
+## 🏦 About NovaBank (Fictional Entity)
 
-System Restore (Windows only): If you're using Windows, you can try using the System Restore feature to revert your system to a previous state before the .exe files were deleted or corrupted.
+**NovaBank** is a completely fictional bank created for this project.
+It has no affiliation with any real financial institution.
+Any resemblance to real banks, logos, or services is coincidental and unintentional.
+NovaBank exists solely to simulate a realistic phishing scenario for educational demonstration.
 
-Antivirus/Antimalware Scan: Run a thorough scan using reputable antivirus or antimalware software. Some malware can hide or corrupt .exe files, and a scan may help detect and restore them.
+---
 
-Check Quarantine: If your antivirus software has a quarantine feature, check to see if any .exe files have been quarantined and restore them if necessary.
+## 📁 Project Structure
 
-Reinstall Software: If the affected .exe files belong to specific software, you may need to reinstall the software to restore the missing files.
+```
+malware-1/
+│
+├── index.html          # Simulated phishing page (fake NovaBank security alert)
+├── blog.html           # Educational page: what is phishing and how to detect it
+├── app.py              # Python script: suspicious file and process remover
+│
+├── css/
+│   ├── style01.css     # Styles for index.html (phishing page theme)
+│   └── style02.css     # Styles for blog.html (educational article theme)
+│
+├── js/
+│   └── script.js       # Shared JavaScript (phishing warning interaction)
+│
+├── img/                # Project images and assets
+│
+└── README.md           # This file
+```
 
-Download from Official Source: If the .exe files are part of system software or applications that were downloaded from official sources, you can re-download them from the official website.
+---
 
-File Recovery Tools: If the .exe files were deleted but not overwritten, you might be able to recover them using file recovery tools. However, this method is not guaranteed to work, particularly if the files have been overwritten or if significant time has passed since deletion.
+## 🔍 How Each File Works
 
-phishing mail-1
-malware-1
+### `index.html` — The Phishing Simulation
+A fake security alert page impersonating NovaBank.
+It mimics the visual style and urgent language used in real phishing emails.
+When the user clicks the download button, a JavaScript warning appears explaining that this is a phishing simulation — **the educational moment of the demo**.
 
+### `blog.html` — The Awareness Page
+An informational article explaining:
+- What phishing is
+- How attackers craft convincing fake pages
+- Red flags to watch for in emails and websites
+- How to protect yourself
 
+### `app.py` — The Mitigation Script
+A Python script that simulates malware removal by:
+- Scanning a directory for files with suspicious extensions (`.exe`, `.vbs`, `.bat`, `.js`)
+- Terminating known malicious process names
+- Logging every action taken
+
+---
+
+## ▶️ How to Run `app.py`
+
+### Requirements
+
+```bash
+pip install psutil
+```
+
+### Execution
+
+```bash
+python app.py
+```
+
+### ⚠️ Important Notes
+
+| Note | Detail |
+|------|--------|
+| **Permissions** | Administrator/root privileges required to terminate processes and delete certain files |
+| **OS** | Designed for Windows. Linux/macOS users must modify file paths in the script |
+| **Environment** | **Always run in a virtual machine or sandbox** — never on a production system |
+| **Purpose** | This script is a demonstration only. It targets fictional process names by default |
+
+---
+
+## 🛡️ Ethical & Legal Disclaimer
+
+- This repository is provided **"as is"** for educational use only.
+- The author does **not** encourage, endorse, or support phishing, malware distribution, or any form of cybercrime.
+- All techniques shown here are well-documented in public cybersecurity literature.
+- If you use materials from this repository, **give proper credit** to the original author.
+- Any use outside of educational or research contexts is **strictly prohibited** and may violate local and international laws.
+
+---
+
+## 🔗 Related Projects
+
+- [phishing](https://github.com/oramirez13) — Related phishing awareness demos
+- [mail-1](https://github.com/oramirez13) — Email phishing simulation
+
+---
+
+*Thank you for using this resource responsibly.*
+*— orami13*
