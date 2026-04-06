@@ -1,4 +1,4 @@
-# malware-1 — Phishing & Malware Awareness Project
+# NovaBank - Phishing & Malware Awareness Project
 
 > ⚠️ **EDUCATIONAL PURPOSE ONLY**
 > This project is a **fictional simulation** created exclusively for academic and educational purposes.
@@ -12,8 +12,6 @@
 
 | Field        | Detail                                      |
 |--------------|---------------------------------------------|
-| Course       | CLV-0062 — Web Development                  |
-| Institution  | Universidad Fidélitas                        |
 | Author       | orami13                                     |
 | Contact      | oramirezmg@gmail.com                        |
 | Year         | 2024                                        |
@@ -44,7 +42,7 @@ NovaBank exists solely to simulate a realistic phishing scenario for educational
 ## 📁 Project Structure
 
 ```
-malware-1/
+NovaBank/
 │
 ├── index.html          # Simulated phishing page (fake NovaBank security alert)
 ├── blog.html           # Educational page: what is phishing and how to detect it
