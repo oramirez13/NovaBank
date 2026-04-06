@@ -139,4 +139,4 @@ python app.py
 ---
 
 Thank you for using this resource responsibly.
-— orami
+- orami
