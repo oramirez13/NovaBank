@@ -1,42 +1,43 @@
 // ================================================
 // script.js — JavaScript compartido
-// Proyecto: NovaBank (Simulación educativa de phishing)
-// Curso: CLV-0062 | Universidad Fidélitas
+// Proyecto: NovaBank (Simulacion educativa de phishing)
+// Curso: CLV-0062 | Universidad Fidelitas
 // Autor: orami13
 // ================================================
 
 
 // ------------------------------------------------
-// ESPERAR A QUE EL DOCUMENTO ESTÉ LISTO
-// $(document).ready() es una función de jQuery que espera a que
-// todo el HTML haya sido cargado antes de ejecutar el código.
-// Esto evita errores al intentar acceder a elementos que aún no existen.
+// ESPERAR A QUE EL DOCUMENTO ESTE LISTO
+// $(document).ready() es una funcion de jQuery que espera a que
+// todo el HTML haya sido cargado antes de ejecutar el codigo.
+// Esto evita errores al intentar acceder a elementos que aun no existen.
 // ------------------------------------------------
 $(document).ready(function () {
-  // Todo el código dentro de esta función se ejecuta cuando la página termina de cargar.
+  // Todo el codigo dentro de esta funcion se ejecuta cuando la pagina termina de cargar.
 
 
   // ------------------------------------------------
-  // FUNCIONALIDAD: BOTÓN DE DESCARGA EN INDEX.HTML
-  // Esta sección solo afecta a index.html porque busca el elemento
-  // con id="download-link", que solo existe en esa página.
+  // FUNCIONALIDAD: BOTON DE DESCARGA EN INDEX.HTML
+  // Esta seccion solo afecta a index.html porque busca el elemento
+  // con id="download-link", que solo existe en esa pagina.
   // Si el elemento no existe (ej: en blog.html), el if no se ejecuta.
   // ------------------------------------------------
 
   if ($("#download-link").length > 0) {
     // $("#download-link") = selector jQuery que busca el elemento con id="download-link"
-    // .length > 0 = verifica que el elemento fue encontrado en esta página
+    // .length > 0 = verifica que el elemento fue encontrado en esta pagina
+    // Si length es 0, el elemento no existe aqui y no ejecutamos el codigo
 
     $("#download-link").on("click", function (event) {
       // .on("click", function) = escucha el evento "click" en el elemento seleccionado
-      // event = objeto con información sobre el evento
+      // event = objeto con informacion sobre el evento ocurrido
 
       event.preventDefault();
-      // event.preventDefault() = cancela la acción predeterminada del enlace.
-      // Sin esto, el navegador intentaría descargar app.py inmediatamente.
+      // event.preventDefault() = cancela la accion predeterminada del enlace.
+      // Sin esto, el navegador intentaria descargar app.py inmediatamente.
 
       mostrarModalPhishing();
-      // Llama a la función que muestra el modal educativo (definida abajo)
+      // Llama a la funcion que muestra el modal educativo (definida abajo)
     });
     // Fin del escuchador de eventos
 
@@ -48,41 +49,35 @@ $(document).ready(function () {
 
 
 // ------------------------------------------------
-// FUNCIÓN: MOSTRAR MODAL EDUCATIVO DE PHISHING
+// FUNCION: MOSTRAR MODAL EDUCATIVO DE PHISHING
 // Busca el modal que ya existe en el HTML de index.html
-// (con id="phishing-modal") y lo muestra usando Bootstrap 5.
+// (con id="phishing-modal") y lo muestra usando jQuery + Bootstrap 4.
 //
-// IMPORTANTE: El modal NO se genera aquí con JavaScript.
+// IMPORTANTE: Bootstrap 4 usa el metodo jQuery .modal("show")
+// a diferencia de Bootstrap 5 que usa new bootstrap.Modal(elemento).
+// El modal NO se genera aqui con JavaScript.
 // Vive en el HTML para evitar problemas al parsear HTML dentro de strings JS.
-// El JS solo se encarga de mostrarlo y ocultarlo.
 // ------------------------------------------------
 function mostrarModalPhishing() {
-  // function = palabra clave para definir una función reutilizable
+  // function = palabra clave para definir una funcion reutilizable
 
-  var elementoModal = document.getElementById("phishing-modal");
-  // document.getElementById() = método nativo del navegador que busca
-  // un elemento HTML por su atributo id.
-  // Devuelve el elemento DOM si lo encuentra, o null si no existe.
-
-  if (!elementoModal) {
-    // Si el elemento no existe en la página, no hacemos nada
-    // ! = operador lógico NOT (negación)
-    // !elementoModal es verdadero cuando elementoModal es null
+  if ($("#phishing-modal").length === 0) {
+    // Verifica si el modal existe en esta pagina antes de intentar mostrarlo
+    // === 0 = el triple igual verifica valor Y tipo (comparacion estricta)
+    // Si el modal no existe, termina la funcion sin hacer nada
     console.warn("Modal #phishing-modal no encontrado en el HTML.");
     // console.warn() = muestra un mensaje de advertencia en la consola del navegador
-    // Útil para depurar sin interrumpir al usuario
+    // Util para depurar sin interrumpir al usuario con alertas
     return;
-    // return = termina la función inmediatamente
+    // return = termina la funcion inmediatamente
   }
 
-  var modal = new bootstrap.Modal(elementoModal);
-  // new bootstrap.Modal(elemento) = crea una instancia del componente Modal de Bootstrap 5.
-  // Recibe el elemento DOM real (no un selector jQuery) como argumento.
-  // Esta instancia nos da acceso a los métodos .show() y .hide()
-
-  modal.show();
-  // .show() = muestra el modal con la animación "fade" definida en Bootstrap.
-  // Bootstrap agrega automáticamente el fondo oscuro (backdrop) detrás del modal.
+  $("#phishing-modal").modal("show");
+  // $("#phishing-modal") = selector jQuery del modal por su id
+  // .modal("show") = metodo de Bootstrap 4 para mostrar un modal.
+  // Bootstrap 4 extiende jQuery con este metodo.
+  // "show" = argumento que indica la accion a realizar (mostrar el modal)
+  // Bootstrap agrega automaticamente el fondo oscuro (backdrop) detras del modal.
 
 }
-// Fin de la función mostrarModalPhishing
+// Fin de la funcion mostrarModalPhishing
