@@ -227,6 +227,120 @@
     <!-- Fin del footer -->
 
     <!-- ================================================
+       MODAL EDUCATIVO DE PHISHING
+       Vive directamente en el HTML (oculto por defecto).
+       Bootstrap lo muestra cuando el usuario hace clic en el botón de descarga.
+       El JS solo llama a modal.show() — no genera HTML dinámico.
+       ================================================ -->
+    <div
+      class="modal fade"
+      id="phishing-modal"
+      tabindex="-1"
+      aria-labelledby="phishing-modal-label"
+      aria-hidden="true"
+    >
+      <!-- modal = clase Bootstrap que define este div como un modal -->
+      <!-- fade = animación de aparecer/desaparecer gradualmente -->
+      <!-- tabindex="-1" = excluye el modal del orden de tabulación normal -->
+      <!-- aria-labelledby = referencia al título del modal (accesibilidad) -->
+      <!-- aria-hidden="true" = oculto para lectores de pantalla hasta que se abra -->
+
+      <div class="modal-dialog modal-dialog-centered">
+        <!-- modal-dialog = contenedor interno que posiciona el modal -->
+        <!-- modal-dialog-centered = centra el modal verticalmente en pantalla -->
+
+        <div class="modal-content">
+          <!-- modal-content = la "caja" visual del modal -->
+
+          <!-- Encabezado del modal -->
+          <div class="modal-header bg-warning">
+            <!-- modal-header = sección superior del modal -->
+            <!-- bg-warning = fondo amarillo Bootstrap (color de advertencia) -->
+
+            <h5 class="modal-title fw-bold" id="phishing-modal-label">
+              <!-- modal-title = estilo Bootstrap para el título -->
+              <!-- fw-bold = texto en negrita -->
+              ⚠️ You just experienced a Phishing Attempt!
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <!-- btn-close = botón X de cierre de Bootstrap -->
+            <!-- data-bs-dismiss="modal" = cierra el modal al hacer clic (sin JS extra) -->
+          </div>
+          <!-- Fin del modal-header -->
+
+          <!-- Cuerpo del modal: explicación educativa -->
+          <div class="modal-body">
+            <!-- modal-body = contenido principal del modal -->
+
+            <p class="mb-2">
+              <strong>This was a simulated phishing page.</strong>
+              The "NovaBank Security Tool" you were about to download does not
+              exist.
+            </p>
+
+            <p class="mb-2">In a real attack, that file could have been:</p>
+
+            <ul class="mb-3">
+              <!-- ul = lista no ordenada en HTML -->
+              <li>
+                A <strong>keylogger</strong> — records everything you type
+              </li>
+              <li>
+                A <strong>trojan</strong> — gives attackers remote access to
+                your system
+              </li>
+              <li>
+                A <strong>ransomware installer</strong> — encrypts your files
+                for ransom
+              </li>
+            </ul>
+
+            <div class="alert alert-info mb-0" role="alert">
+              <!-- alert-info = alerta azul Bootstrap (informativa) -->
+              <!-- mb-0 = sin margin-bottom (último elemento del body) -->
+              💡 <strong>Want to learn more?</strong> Visit our
+              <a href="blog.html" class="alert-link">Awareness Page</a>
+              to understand how phishing works and how to protect yourself.
+              <!-- alert-link = estilo Bootstrap para enlaces dentro de alertas -->
+            </div>
+          </div>
+          <!-- Fin del modal-body -->
+
+          <!-- Pie del modal: botones de acción -->
+          <div class="modal-footer">
+            <!-- modal-footer = sección inferior del modal -->
+
+            <a href="blog.html" class="btn btn-primary">
+              <!-- btn-primary = botón azul Bootstrap -->
+              <!-- href="blog.html" = navega a la página educativa al hacer clic -->
+              📖 Learn More
+            </a>
+
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              <!-- btn-secondary = botón gris Bootstrap -->
+              <!-- data-bs-dismiss="modal" = cierra el modal sin navegar -->
+              Close
+            </button>
+          </div>
+          <!-- Fin del modal-footer -->
+        </div>
+        <!-- Fin del modal-content -->
+      </div>
+      <!-- Fin del modal-dialog -->
+    </div>
+    <!-- Fin del modal -->
+
+    <!-- ================================================
        SCRIPTS — Se cargan al final del body para mejor rendimiento
        Cargarlos al final permite que el HTML se muestre antes de ejecutar JS
        ================================================ -->
