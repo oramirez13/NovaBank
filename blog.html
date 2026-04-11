@@ -215,8 +215,8 @@
                     <!-- text-danger = texto rojo -->
                     <p class="card-text small">
                       The email address does not match the official domain.
-                      Example: <code>security@nov4bank.com</code> instead of
-                      <code>security@novabank.com</code>
+                      Example: <code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dba8beb8aea9b2afa29bb5b4adefb9bab5b0f5b8b4b6">[email&#160;protected]</a></code> instead of
+                      <code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89faeceafcfbe0fdf0c9e7e6ffe8ebe8e7e2a7eae6e4">[email&#160;protected]</a></code>
                       <!-- code = etiqueta HTML para mostrar codigo o texto tecnico en monospace -->
                     </p>
                   </div>
@@ -301,35 +301,6 @@
           </section>
           <!-- Fin de la seccion 4 -->
 
-          <!-- SECCION 5: El script de mitigacion -->
-          <section class="mb-5">
-
-            <h2 class="blog-section-title">The Mitigation Script</h2>
-
-            <p>
-              This project also includes <code>app.py</code>, a Python script that
-              demonstrates one way to <strong>detect and remove malware</strong> from
-              a system — the defensive side of the attack lifecycle.
-            </p>
-
-            <p>The script does the following:</p>
-
-            <ul>
-              <!-- ul = lista no ordenada (con puntos) -->
-              <li>Scans a directory for files with suspicious extensions (<code>.exe</code>, <code>.vbs</code>, <code>.bat</code>)</li>
-              <li>Identifies and terminates known malicious process names</li>
-              <li>Logs every action with timestamps for auditability</li>
-            </ul>
-
-            <!-- Bloque de instruccion de ejecucion -->
-            <div class="alert alert-secondary" role="alert">
-              <!-- alert-secondary = variante gris de la alerta Bootstrap -->
-              <code>python app.py</code> — Run with administrator privileges in a VM or sandbox only.
-            </div>
-
-          </section>
-          <!-- Fin de la seccion 5 -->
-
           <!-- DISCLAIMER FINAL -->
           <div class="alert alert-warning" role="alert">
             <!-- alert-warning = variante amarilla de la alerta Bootstrap -->
@@ -364,7 +335,7 @@
     <!-- Se cargan al final del body para mejor rendimiento -->
 
     <!--jQuery-->
-    <script
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
@@ -382,16 +353,4 @@
     <!-- Bootstrap JS debe cargarse despues de jQuery y Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- js/script.js -->
-    <!-- Script propio del proyecto — se carga al ultimo para que jQuery ya este disponible -->
-    <script src="js/script.js" type="text/javascript"></script>
-
-  </body>
-  <!-- Fin del body -->
-
-</html>
-<!-- Fin del documento HTML -->
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZ
