@@ -1,9 +1,9 @@
-# NovaBank — Phishing & Malware Awareness Project
+# NovaBank - Phishing & Malware Awareness Project
 
-> WARNING — EDUCATIONAL PURPOSE ONLY
+> WARNING - EDUCATIONAL PURPOSE ONLY
 > This project is a fictional simulation created exclusively for academic and educational purposes.
 > NovaBank does not exist. No real bank, brand, or institution is represented here.
-> The phishing page is intentionally fake. It is designed to demonstrate how phishing attacks work — not to deceive real users.
+> The phishing page is intentionally fake. It is designed to demonstrate how phishing attacks work - not to deceive real users.
 > Do not use any part of this project for malicious, unauthorized, or illegal activities.
 
 ---
@@ -22,9 +22,9 @@
 
 This project demonstrates the **full lifecycle of a phishing attack** from an educational perspective:
 
-1. **The Bait** — A realistic-looking fake security alert from a fictional bank (NovaBank)
-2. **Awareness** — A page explaining how phishing works and how to detect it
-3. **Mitigation** — A Python script that detects and removes suspicious files and processes
+1. **The Bait** - A realistic-looking fake security alert from a fictional bank (NovaBank)
+2. **Awareness** - A page explaining how phishing works and how to detect it
+3. **Mitigation** - A Python script that detects and removes suspicious files and processes
 
 The goal is to help students and general users understand phishing tactics so they can **recognize and avoid them** in real life.
 
@@ -59,19 +59,19 @@ NovaBank/
 ```
 
 > Note on app.py location: This is a standalone Python script, not a Flask application.
-> By Python convention, standalone scripts live in the project root — no subfolder needed.
+> By Python convention, standalone scripts live in the project root - no subfolder needed.
 
 ---
 
 ## How Each File Works
 
-### index.html — The Phishing Simulation
+### index.html - The Phishing Simulation
 
 A fake security alert page impersonating NovaBank.
 It mimics the visual style and urgent language used in real phishing attacks.
-When the user clicks the download button, a JavaScript warning appears revealing this is a simulation — the educational moment of the demo.
+When the user clicks the download button, a JavaScript warning appears revealing this is a simulation - the educational moment of the demo.
 
-### blog.html — The Awareness Page
+### blog.html - The Awareness Page
 
 An informational article explaining:
 
@@ -80,13 +80,13 @@ An informational article explaining:
 - Red flags to watch for in emails and websites
 - How to protect yourself
 
-### css/style.css — Shared Stylesheet
+### css/style.css - Shared Stylesheet
 
 A single CSS file used by both index.html and blog.html.
 Defines shared base styles (typography, layout, header, footer, buttons)
 and page-specific classes where visual differences are needed.
 
-### js/script.js — Shared JavaScript
+### js/script.js - Shared JavaScript
 
 A single script file used by both pages.
 Handles the phishing warning popup interaction on index.html
