@@ -10,7 +10,6 @@
 
 ## Academic Context
 
-| Field   | Detail               |
 | ------- | -------------------- |
 | Author  | orami                |
 | Contact | usuario.generico@example.com |
